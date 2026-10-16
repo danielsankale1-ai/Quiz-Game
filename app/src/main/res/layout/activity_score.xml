@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/quiz_background"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".ScoreActivity">
+
+    <!-- 1. Screen Title -->
+    <TextView
+        android:id="@+id/tvHighScoresTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="🏆 LEADERBOARD"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- 2. Category Tabs -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        app:tabTextColor="@color/white"
+        app:tabSelectedTextColor="@color/secondaryColor"
+        app:tabIndicatorColor="@color/secondaryColor"
+        app:tabMode="scrollable" />
+
+    <!-- 3. Leaderboard Scores Card (weight=1 expands to fill middle) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/cardBackground"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/tvScoresList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textPrimary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="6dp" />
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 4. Bottom Horizontal Buttons Bar (Always anchored below card) -->
+    <LinearLayout
+        android:id="@+id/llBottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <!-- Back to Quiz Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1.6"
+            android:layout_marginEnd="8dp"
+            android:text="⬅️ BACK TO QUIZ"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/secondaryColor"
+            android:textColor="@color/textPrimary"
+            app:cornerRadius="28dp"
+            app:elevation="4dp" />
+
+        <!-- Clear Scores Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="🗑️ CLEAR"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/wrong"
+            android:textColor="@color/white"
+            app:cornerRadius="28dp"
+            app:elevation="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

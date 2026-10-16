@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Modern Vibrant Palette -->
+    <color name="primaryColor">#673AB7</color> <!-- Deep Purple -->
+    <color name="primaryVariant">#512DA8</color>
+    <color name="secondaryColor">#FFC107</color> <!-- Amber -->
+
+    <color name="background">#F0F2F5</color>
+    <color name="cardBackground">#FFFFFF</color>
+
+    <color name="correct">#2ECC71</color> <!-- Emerald Green -->
+    <color name="wrong">#E74C3C</color> <!-- Alizarin Crimson -->
+
+    <color name="textPrimary">#2C3E50</color>
+    <color name="textSecondary">#7F8C8D</color>
+
+    <!-- New Bright Option Colors -->
+    <color name="optionColor">#3498DB</color> <!-- Bright Blue -->
+    <color name="optionText">#FFFFFF</color>
+
+    <!-- Nav Button Colors -->
+    <color name="colorCategories">#00BCD4</color> <!-- Cyan -->
+    <color name="colorLeaderboard">#FF9800</color> <!-- Orange -->
+    <color name="colorHowToPlay">#E91E63</color> <!-- Pink -->
+    <color name="colorSettings">#9C27B0</color> <!-- Purple -->
+</resources>

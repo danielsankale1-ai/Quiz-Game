@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Audio Settings"
+        android:textColor="@color/textPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <Switch
+        android:id="@+id/swSound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sound Effects"
+        android:textColor="@color/textPrimary"
+        android:layout_marginBottom="8dp"/>
+
+    <Switch
+        android:id="@+id/swMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Background Music"
+        android:textColor="@color/textPrimary"
+        android:layout_marginBottom="24dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnResetScores"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Leaderboard"
+        android:textColor="@color/wrong" />
+
+</LinearLayout>

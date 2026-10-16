@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/quiz_background"
+    android:padding="16dp"
+    tools:context=".HomeActivity">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvHomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_master"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+
+        <TextView
+            android:id="@+id/tvHomeSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test_knowledge"
+            android:textColor="@color/secondaryColor"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tvPlayerLevelHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level 1 Scholar • XP: 0"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/btn_outline" />
+
+        <View
+            android:layout_width="90dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            android:alpha="0.5" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp">
+
+            <!-- Crisp, Legible Card for Description Text -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardGameDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="@color/cardBackground"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💡 Welcome to Quiz Master!"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Test your wits across ICT, Science, Geography, and Sports! Earn points, unlock levels, and climb the leaderboard."
+                        android:textColor="@color/textPrimary"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="3dp" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Primary Action: Start Game (Pushed down below text with side margins) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartGame"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="🎮 START QUIZ 🎮"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/secondaryColor"
+                android:textColor="@color/textPrimary"
+                app:cornerRadius="36dp"
+                app:elevation="8dp" />
+
+            <!-- Secondary Action: Daily Challenge -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDailyChallenge"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="🔥 DAILY CHALLENGE 🔥"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="#FF5722"
+                android:textColor="@color/white"
+                app:cornerRadius="30dp"
+                app:elevation="6dp" />
+
+            <!-- Navigation Actions with Left/Right Margins and Curved Corners -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCategories"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:text="📚 CATEGORIES"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorCategories"
+                app:cornerRadius="28dp"
+                app:elevation="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLeaderboard"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:text="🏆 LEADERBOARD"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorLeaderboard"
+                app:cornerRadius="28dp"
+                app:elevation="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAchievements"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:text="🎖️ ACHIEVEMENTS &amp; STATS"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#8E24AA"
+                app:cornerRadius="28dp"
+                app:elevation="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHowToPlay"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:text="📖 HOW TO PLAY"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorHowToPlay"
+                app:cornerRadius="28dp"
+                app:elevation="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSettings"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="⚙️ SETTINGS"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorSettings"
+                app:cornerRadius="28dp"
+                app:elevation="4dp" />
+
+            <!-- System Action: Exit -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExit"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="12dp"
+                android:text="🚪 EXIT"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/wrong"
+                android:textColor="@color/white"
+                app:cornerRadius="28dp"
+                app:elevation="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
